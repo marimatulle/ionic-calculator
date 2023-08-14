@@ -1,0 +1,43 @@
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    ion-label.display {
+        font-size: 24px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+    }
+
+    ion-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        ion-col {
+            flex: 4;
+
+            ion-button {
+                border-radius: 50%;
+                font-size: 18px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        ion-row {
+            ion-col {
+                ion-button {
+                    font-size: 16px;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

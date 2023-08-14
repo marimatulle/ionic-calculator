@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="titulo">
+      Ionic Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="calculator-container">
+    <ion-item>
+      <ion-label class="display">{{ displayValue }}</ion-label>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(1)">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(2)">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(3)">3</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(4)">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(5)">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(6)">6</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(7)">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(8)">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(9)">9</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="addDigit(0)">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="selectOperation('+')">+</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="selectOperation('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="selectOperation('*')">*</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="selectOperation('/')">/</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="calculate()">=</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="clear()">C</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>
