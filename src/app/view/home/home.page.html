@@ -1,0 +1,51 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="titulo">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAUBJREFUWEftmEFOAzEMRV/gCJ2q3AY2sGgWLAsX6ZayReIe7QEGCVblNkAznAARFNQKARMaU5caaFajyHGevr81chzGljPGw+8B6lLvPcMFcAT0lJS8B252YDjD37XlzCpUUY8jDJRA3qVxMAn4EynQLEK1JqAQ8F0RUIc6Lg40eBWvleTMXlRyWKpeSc4t0DIbFCnk4Fxanrb4CGcqQBowH3PkGqVIIatAtw6mCS7CAbA/B5Xuvx5bWaHko4AfpWQV9WjhB+m+moekF+fi1YAAaWly8Tol0zb2yh6yCGSrZOZMbQ5I2mU/0fYiX/9LIFGXrV0hc6Y2ByTtsi/i/8y/7CpA7Ih6vTjYNQ391iF0I6N0xI0f6Z+KJtf5Y8MlcAi0jr3FgrwFpseG612ehg8cp+9PS2VE/gZY9sgWaJmaL6ygGDTxrGBzAAAAAElFTkSuQmCC"/>
+    Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+
+
+    <style>
+      .header-toolbar {
+        --ion-toolbar-background: #af0a0a; /* Cor de fundo do cabeçalho */
+        --ion-title-color: #1f037b; /* Cor do título */
+      }
+    </style>
+
+
+    <ion-item>
+      <ion-input label="Valor1:" type="number" placeholder="Insira o Valor" [(ngModel)]="valor1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Valor2:" type="number" placeholder="Insira o Valor" [(ngModel)]="valor2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Operação:" [(ngModel)]="operacao">
+        <ion-select-option value="Dividir">Dividir</ion-select-option>
+        <ion-select-option value="Somar">Somar</ion-select-option>
+        <ion-select-option value="Diminuir">Diminuir</ion-select-option>
+        <ion-select-option value="Multiplicar">Multiplicar</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" (click)="calcular()">Calcular</ion-button>
+
+    <ion-item *ngIf="resultado !== undefined">
+      <ion-label>Resultado: {{ resultado }}</ion-label>
+    </ion-item>
+
+
+    <ion-button expand="full" (click)="limparCampos()">Limpar</ion-button>
+
+
+  </ion-list>
+</ion-content>
