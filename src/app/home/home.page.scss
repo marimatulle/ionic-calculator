@@ -10,6 +10,8 @@
         padding: 10px;
         background-color: #f4f4f4;
         border-radius: 10px;
+        text-align: right;
+        width: 100%;
     }
 
     ion-row {
@@ -18,13 +20,23 @@
         margin-bottom: 10px;
 
         ion-col {
-            flex: 4;
+            flex: 1;
 
             ion-button {
-                border-radius: 50%;
-                font-size: 18px;
-                width: 60px;
-                height: 60px;
+                border-radius: 10px;
+                font-size: 24px;
+                width: 100%;
+                height: 80px;
+
+                &.operation {
+                    background-color: #f4f4f4;
+                    color: #3498db;
+                }
+
+                &.equals {
+                    background-color: #3498db;
+                    color: #ffffff;
+                }
             }
         }
     }
@@ -33,9 +45,8 @@
         ion-row {
             ion-col {
                 ion-button {
-                    font-size: 16px;
-                    width: 50px;
-                    height: 50px;
+                    font-size: 18px;
+                    height: 60px;
                 }
             }
         }
